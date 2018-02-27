@@ -1,0 +1,180 @@
+@mixin clearfix ($extend:true) {
+  @if $extend {
+    @extend %clearfix;
+  } @else {
+    @if $lte7 {
+      *zoom: 1;
+    }
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+}
+%clearfix{
+  @include clearfix(false);
+}
+
+@mixin border_half($color: $borderColor, $radius: 0){
+  position: relative;
+  &:after{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: 1px solid $color;
+    border-radius: $radius;
+    -webkit-transform: scale(0.5,0.5);
+    transform: scale(0.5,0.5);
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+  }
+}
+
+@mixin border_bottom_half($color: $borderColor){
+  position: relative;
+  &:after{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid $color;
+    -webkit-transform: scale(0.5,0.5);
+    transform: scale(0.5,0.5);
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+  }
+}
+@mixin border_top_half($color: $borderColor){
+  position: relative;
+  &:after{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-top: 1px solid $color;
+    -webkit-transform: scale(0.5,0.5);
+    transform: scale(0.5,0.5);
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+  }
+}
+@mixin border_left_half($color: $borderColor){
+  position: relative;
+  &:after{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-left: 1px solid $color;
+    -webkit-transform: scale(0.5,0.5);
+    transform: scale(0.5,0.5);
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+  }
+}
+@mixin border_right_half($color: $borderColor){
+  position: relative;
+  &:after{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-right: 1px solid $color;
+    -webkit-transform: scale(0.5,0.5);
+    transform: scale(0.5,0.5);
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+  }
+}
+
+// @mixin border_half {
+//     border-width: 0px;
+//     border: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }
+//
+// @mixin border_top_half {
+//     border-width: 0;
+//     border-top: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+//   }
+//
+// @mixin border_bottom_half {
+//     border-width: 0;
+//     border-bottom: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }
+//
+// @mixin border_left_half {
+//     border-width: 0;
+//     border-left: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }
+//
+// @mixin border_right_half {
+//     border-width: 0;
+//     border-right: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }
+//
+// @mixin border_vertical_half {
+//     border-width: 0;
+//     border-top: 1px solid #ccc;
+//     border-bottom: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }
+//
+// @mixin border_horizontal_half {
+//     border-width: 0;
+//     border-left: 1px solid #ccc;
+//     border-right: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }
+//
+// @mixin border_left_bottom_half {
+//     border-width: 0;
+//     border-left: 1px solid #ccc;
+//     border-bottom: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }
+//
+// @mixin border_right_bottom_half {
+//     border-width: 0;
+//     border-right: 1px solid #ccc;
+//     border-bottom: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }
+//
+// @mixin border_left_top_half {
+//     border-width: 0;
+//     border-top: 1px solid #ccc;
+//     border-left: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }
+//
+// @mixin border_right_top_half {
+//     border-width: 0;
+//     border-top: 1px solid #ccc;
+//     border-right: 1px solid #ccc;
+//     -webkit-border-image: url("../../assets/icon_border_half.png") 2 stretch;
+// }

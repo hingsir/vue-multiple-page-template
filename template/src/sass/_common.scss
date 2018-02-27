@@ -1,0 +1,69 @@
+html{
+  height: 100%;
+}
+body{
+  font-family: Arial, Roboto, "PingFang SC", "Droid Sans","Hiragino Sans GB";
+  background: #0d0d0d;
+  color: $gray;
+  font-size: 1.4rem;
+  overflow-x: hidden;
+  -webkit-user-select: text;
+  &.theme-black{
+    background: #0d0d0d;
+    color: $gray;
+  }
+  &.theme-w{
+    background: #fff;
+    color: $w-gray;
+  }
+  &.fixed-body{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.logo{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url('../../assets/logo.png') 0 0 /100% 100% no-repeat;
+}
+
+.red{
+  color: $red !important;
+}
+.white{
+  color: $white !important;
+}
+.green{
+  color: $green !important;
+}
+.blue{
+  color: $blue !important;
+}
+.gray{
+  color: $gray !important;
+}
+.bg-green{
+  background: #3ca170 !important;
+}
+.left{
+  text-align: left !important;
+}
+.right{
+  text-align: right !important;
+}
+.center{
+  text-align: center !important;
+}
+
+
+.theme-w{
+  .white{
+    color: $w-white !important;
+  }
+  .gray{
+    color: $w-gray !important;
+  }
+}
